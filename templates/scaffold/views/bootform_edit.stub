@@ -1,0 +1,17 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="pull-left">Edit $MODEL_NAME_HUMAN$</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        {!! BootForm::open(['model' => $$MODEL_NAME_CAMEL$, 'store' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store', 'update' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', 'method' => 'patch']) !!}
+
+        @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+
+        {!! BootForm::close() !!}
+    </div>
+@endsection

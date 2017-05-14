@@ -1,0 +1,10 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-12">
+<?php
+$radios = [
+$RADIO_BUTTONS$
+];
+?>
+    {!! BootForm::radios('$FIELD_NAME$', '$FIELD_NAME_TITLE$:', $radios) !!}
+
+</div>

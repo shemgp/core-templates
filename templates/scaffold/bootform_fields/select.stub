@@ -1,0 +1,4 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="form-group col-sm-6">
+    {!! BootForm::select('$FIELD_NAME$', '$FIELD_NAME_TITLE$:', $INPUT_ARR$, null, ['class' => 'form-control']) !!}
+</div>

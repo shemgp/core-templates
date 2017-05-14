@@ -1,0 +1,17 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="pull-left">Create New $MODEL_NAME_HUMAN$</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        {!! BootForm::open(['route' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store']) !!}
+
+        @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+
+        {!! BootForm::close() !!}
+    </div>
+@endsection
